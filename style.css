@@ -150,11 +150,22 @@ h2 { font-size: 18px; font-weight: 550; letter-spacing: -.5px; margin-bottom: 8p
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
 
-/* Blue Llama Tile Artwork for Project one */
+/* Keep project cards close to their original desktop dimensions. */
+.project-grid { max-width: 800px; }
+.tile-top, .tile-bottom { flex-shrink: 0; }
+
+/* Label, artwork and title each have their own layout area. */
+.tile-current-label {
+  text-align: center;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  margin: 12px 0 0;
+}
 .art-llama {
   transform: none;
+  min-height: 0;
+  margin: 10px 0;
 }
-
 .art-llama img {
   position: absolute;
   inset: 0;
@@ -162,5 +173,16 @@ h2 { font-size: 18px; font-weight: 550; letter-spacing: -.5px; margin-bottom: 8p
   display: block;
   width: min(65%, 180px);
   height: 100%;
+  max-height: 180px;
   object-fit: contain;
 }
+.repository-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color .2s;
+}
+.repository-link:hover { color: var(--text); }
