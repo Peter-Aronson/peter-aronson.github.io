@@ -149,3 +149,18 @@ h2 { font-size: 18px; font-weight: 550; letter-spacing: -.5px; margin-bottom: 8p
   .welcome-footer { font-size: 10px; gap: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+/* Blue Llama Tile Artwork for Project one */
+.art-llama {
+  transform: none;
+}
+
+.art-llama img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  display: block;
+  width: min(65%, 180px);
+  height: 100%;
+  object-fit: contain;
+}
